@@ -1,9 +1,72 @@
 {
-  "ImportPath": "dc-jam",
-  "GoVersion": "go1.8.1",
-  "GodepVersion": "v79",
-  "Packages": [
-    "."
-  ],
-  "Deps": []
+	"ImportPath": "github.com/alexyslozada/dc-jam",
+	"GoVersion": "go1.8.1",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/dgrijalva/jwt-go",
+			"Comment": "v3.0.0-17-g2268707",
+			"Rev": "2268707a8f0843315e2004ee4f1d021dc08baedf"
+		},
+		{
+			"ImportPath": "github.com/labstack/echo",
+			"Comment": "v3.1.0-rc.1-35-gc3069d4",
+			"Rev": "c3069d42c14d073a07fe6458fda46d65579492db"
+		},
+		{
+			"ImportPath": "github.com/labstack/echo/middleware",
+			"Comment": "v3.1.0-rc.1-35-gc3069d4",
+			"Rev": "c3069d42c14d073a07fe6458fda46d65579492db"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/bytes",
+			"Comment": "v0.2.0-4-g9298d71",
+			"Rev": "9298d710c664bcd21c454120f63a00fb7d484458"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/color",
+			"Comment": "v0.2.0-4-g9298d71",
+			"Rev": "9298d710c664bcd21c454120f63a00fb7d484458"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/log",
+			"Comment": "v0.2.0-4-g9298d71",
+			"Rev": "9298d710c664bcd21c454120f63a00fb7d484458"
+		},
+		{
+			"ImportPath": "github.com/labstack/gommon/random",
+			"Comment": "v0.2.0-4-g9298d71",
+			"Rev": "9298d710c664bcd21c454120f63a00fb7d484458"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Comment": "v0.0.7-24-gded68f7",
+			"Rev": "ded68f7a9561c023e790de24279db7ebf473ea80"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-isatty",
+			"Comment": "v0.0.2",
+			"Rev": "fc9e8d8ef48496124e79ae0df75490096eccf6fe"
+		},
+		{
+			"ImportPath": "github.com/valyala/bytebufferpool",
+			"Rev": "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
+		},
+		{
+			"ImportPath": "github.com/valyala/fasttemplate",
+			"Rev": "dcecefd839c4193db0d35b88ec65b4c12d360ab0"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/acme",
+			"Rev": "efac7f277b17c19894091e358c6130cb6bd51117"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/acme/autocert",
+			"Rev": "efac7f277b17c19894091e358c6130cb6bd51117"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "a2e06a18b0d52d8cb2010e04b372a1965d8e3439"
+		}
+	]
 }
