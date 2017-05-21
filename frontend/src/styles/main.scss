@@ -3,6 +3,14 @@ html, body {
     margin: 0;
     padding: 0;
 }
+nav{
+    .brand-logo{
+        left: 15px !important;
+    }
+}
+.chart{
+    height: 400px !important;
+}
 .hero{
     height: 400px;
     width: 100%;
