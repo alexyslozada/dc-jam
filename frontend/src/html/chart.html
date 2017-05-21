@@ -5,11 +5,12 @@
     <title>Datos Abiertos</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <nav class="light-blue darken-1">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo left">Logo</a>
+            <a href="index-html" class="brand-logo"> BOGOTÁ</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="chart.html">Desplazamiento</a></li>
@@ -19,10 +20,15 @@
     </nav>
     <div class="row">
         <div class="col s10 push-s1">
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas class="chart" id="myChart" width="400" height="400"></canvas>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <h5>Desplazamientos</h5>
+            <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ipsum odit, Libero laudantium praesentium facere iste eius fugit officia at minima, aperiam, quod nisi temporibus porro, facilis. Laudantium, quis, officia!</p>
+        </div>
+    </div>
     <footer class="page-footer light-blue darken-1">
         <div class="container">
         <div class="row">
@@ -45,6 +51,7 @@
             © 2017 DAG
         </div>
         </div>
+        
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
     <script src="chart.js"></script>

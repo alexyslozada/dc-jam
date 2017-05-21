@@ -8,7 +8,6 @@
         expulsadas = [],
         recibidas = [];
     let ctx = document.getElementById("myChart");
-
     let xhr = new XMLHttpRequest();
     xhr.open('GET', '/api/desplazamiento', true)
     xhr.addEventListener('load', e => {
@@ -26,6 +25,11 @@
         console.log(vigencias);
         let myChart = new Chart(ctx, {
             type: 'bar',
+            options: {
+                scales: {
+                    height: 400,
+                }
+            },
             data: {
                 labels: vigencias,
                 datasets: [{
@@ -49,5 +53,6 @@
 
     });
     xhr.send();
+    ctx.style.height = 400;
 
 })();
