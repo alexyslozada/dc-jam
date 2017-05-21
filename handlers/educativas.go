@@ -8,6 +8,10 @@ import (
 	"encoding/json"
 )
 
+func init()  {
+	loadLocalidades()
+}
+
 type EducativasStruct struct {
 	ID int `json:"_id"`
 	Sector string `json:"sector"`
@@ -54,7 +58,6 @@ var localidades = make([]LocalidadStruct, 0)
 func Educativas(c echo.Context) error {
 	m := Message{}
 	re := ResponseEducativas{}
-	loadLocalidades()
 
 	resourceID := "92d26b06-96ec-4ac5-9111-be81fa0112b2"
 	limit := "10000"
