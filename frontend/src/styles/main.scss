@@ -1,8 +1,53 @@
-.map {
-    height: 400px;
-}
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+.hero{
+    height: 400px;
+    width: 100%;
+    background-image: url(slide.jpg);
+    background-color: #666;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color: #000;
+        opacity: 0.5;
+    }
+    &__caption{
+        color: white;
+        z-index: 99;
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 6em;
+        }
+        h3{
+            font-weight: 100;
+            font-size: 3em;
+        }
+    }
+}
+.map {
+    height: 400px;
+}
+
+.preloader-wrapper{
+    margin-top: 50px;
+}
+
+.sidebar {
+    height: 400px;
+    overflow-y: auto;
 }

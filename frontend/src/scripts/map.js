@@ -13,13 +13,11 @@ function ajaxRequest() {
         let response = e.target,
             data = JSON.parse(response.responseText);
 
+        document.querySelector('#preloader').classList.add('hide');
         initMap(data);
     });
     xhr.addEventListener('loadstart', () => {
-        console.log("comencé a procesar");
-    });
-    xhr.addEventListener('progress', () => {
-        console.log("procesando");
+        document.querySelector('#preloader').classList.remove('hide');
     });
     xhr.send();
 }
@@ -44,6 +42,8 @@ function initMap(data) {
 
     markers.forEach((marker, i) => {
         marker.addListener('click', () => {
+            document.querySelector('#sidebarText').classList.add('hide');
+            document.querySelector('#sidebarTable').classList.remove('hide');
             instituciones = data.result.records.filter(institucion => {
                 return institucion.localidad === localidades[i].id;
             });
