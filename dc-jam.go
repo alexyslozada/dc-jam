@@ -4,6 +4,7 @@ import (
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/echo"
 	"github.com/alexyslozada/dc-jam/routers"
+	"os"
 )
 
 func main() {
@@ -15,5 +16,10 @@ func main() {
 
 	routers.StartAll(e)
 
-	e.Logger.Fatal(e.Start(":8080"))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	e.Logger.Fatal(e.Start(":" + port))
 }

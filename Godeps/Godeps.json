@@ -1,0 +1,9 @@
+{
+  "ImportPath": "dc-jam",
+  "GoVersion": "go1.8.1",
+  "GodepVersion": "v79",
+  "Packages": [
+    "./.."
+  ],
+  "Deps": []
+}
