@@ -2,15 +2,44 @@
  * Created by Dapino on 21/05/17
  */
 
-let map = null;
-function initMap() {
+let map = null,
+    localidades = [];
+
+function ajaxRequest() {
+    let xhr = new XMLHttpRequest();
+
+    xhr.open('GET', '/api/educativas', true)
+    xhr.addEventListener('load', e => {
+        let response = e.target,
+            data = JSON.parse(response.responseText);
+            localidades = data.localidades;
+        
+        data.result.records.forEach((v, i) => {
+        });
+        initMap(localidades);
+    });
+    xhr.addEventListener('loadstart', () => {
+        console.log("comencé a procesar");
+    });
+    xhr.addEventListener('progress', () => {
+        console.log("procesando");
+    });
+    xhr.send();
+
+    ;
+    
+}
+
+function initMap(localidades) {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: new google.maps.LatLng(-31.563910,147.154312),
         mapTypeId: 'roadmap'
     });
 
-    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    console.log(localidades);
+
+    let labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var locations = [
         {lat: -31.563910, lng: 147.154312},
         {lat: -33.718234, lng: 150.363181},
