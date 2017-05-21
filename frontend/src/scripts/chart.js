@@ -2,14 +2,6 @@
  * Created by alexys on 20/05/17.
  */
 (() => {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    let requestData = {
-        method: 'GET',
-        headers: headers
-    };
-
     let data = {},
         declaradas = [],
         vigencias = [],
